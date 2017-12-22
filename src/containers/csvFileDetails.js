@@ -35,7 +35,7 @@ class CsvFileDetails extends Component {
     setCSVData(data) {
       const { apiData } = this.state;
       let finalData = [];
-      const colorsArr = ["red","green","yellow", "orange", "blue", "black","silver", "grey","indigo", "brown"];
+      const colorsArr = ["red","green","yellow", "orange", "blue", "black","silver", "grey","golden", "brown"];
       let uniqueCategories = {};
       for (let i = 0; i < apiData.length; i++) {
         let d = {};

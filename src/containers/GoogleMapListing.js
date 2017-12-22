@@ -65,7 +65,12 @@ class GoogleMapListing extends Component {
     }
 
     render(){
-        return (<div id='dvMap'></div>)
+        const {addresses} = this.props;
+        return (
+          addresses ? <div className={"map-responsive"}>
+            <div id='dvMap'></div>
+          </div>: null)
+
     }
 
 }
