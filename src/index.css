@@ -4,32 +4,20 @@ body {
   font-family: sans-serif;
 }
 
-.userListHeading {
+.Heading {
   margin: 0 auto;
   background: #012b72;
   text-align: center;
   color: #fff;
   padding: 15px 0;
 }
+
+#dvMap {
+    height: 800px;
+}
 .userListing {
   background: #f3f3f3;
   padding: 10px;
-}
-.odd {
-  background: #f3f7f8;
-}
-.userListing img {
-  height : 100px;
-}
-.userListing div {
-  text-transform: capitalize;
-  display: inline-block;
-  position: absolute;
-  margin: 38px 10px;
-}
-.userListing button{
-  float: right;
-  margin: 23px;
 }
 .btn {
   cursor : pointer;
@@ -42,82 +30,103 @@ body {
   display: inline-block;
   font-size: 16px;
 }
-
-.loadMore {
-  position: absolute;
-  left: 45%;
-  margin: 10px 0;
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
 }
 
-.userDetails {
-  list-style: none;
-  display: -webkit-box;
-}
-.userDetails li {
-  width:20%;
-}
-.userListHeading.userDetails {
-  border: solid 1px ;
+th, td {
+    text-align: left;
+    padding: 8px;
 }
 
-.userDetails li img {
-  width: 200px;
+tr:nth-child(even){background-color: #f2f2f2}
+.react-file-reader-button {
+  text-align: center;
+  margin: 100px auto;
+  height: 300px;
 }
-/*Loader css*/
-.loader {
-  left: 50%;
-  top: 50%;
-  position: fixed;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
-.loader #spinner {
+.Dropdown-root {
+  position: relative;
+}
+.Dropdown-control {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 2px;
   box-sizing: border-box;
-  stroke: #673AB7;
-  stroke-width: 3px;
-  -webkit-transform-origin: 50%;
-  transform-origin: 50%;
-  -webkit-animation: line 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite, rotate 1.6s linear infinite;
-  animation: line 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite, rotate 1.6s linear infinite; }
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0);
-    transform: rotate(0); }
-  to {
-    -webkit-transform: rotate(450deg);
-    transform: rotate(450deg); } }
-
-@keyframes rotate {
-  from {
-    -webkit-transform: rotate(0);
-    transform: rotate(0); }
-  to {
-    -webkit-transform: rotate(450deg);
-    transform: rotate(450deg); } }
-
-@-webkit-keyframes line {
-  0% {
-    stroke-dasharray: 2, 85.964;
-    -webkit-transform: rotate(0);
-    transform: rotate(0); }
-  50% {
-    stroke-dasharray: 65.973, 21.9911;
-    stroke-dashoffset: 0; }
-  100% {
-    stroke-dasharray: 2, 85.964;
-    stroke-dashoffset: -65.973;
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg); } }
-
-@keyframes line {
-  0% {
-    stroke-dasharray: 2, 85.964;
-    -webkit-transform: rotate(0);
-    transform: rotate(0); }
-  50% {
-    stroke-dasharray: 65.973, 21.9911;
-    stroke-dashoffset: 0; }
-  100% {
-    stroke-dasharray: 2, 85.964;
-    stroke-dashoffset: -65.973;
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg); } }
+  color: #333;
+  cursor: default;
+  outline: none;
+  padding: 8px 52px 8px 10px;
+  transition: all 200ms ease;
+}
+.Dropdown-control:hover {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+.Dropdown-arrow {
+  border-color: #999 transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 0;
+  content: ' ';
+  display: block;
+  height: 0;
+  margin-top: -ceil(2.5);
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  width: 0;
+}
+.is-open .Dropdown-arrow {
+  border-color: transparent transparent #999;
+  border-width: 0 5px 5px;
+}
+.Dropdown-menu {
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  margin-top: -1px;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 1000;
+  -webkit-overflow-scrolling: touch;
+}
+.Dropdown-menu .Dropdown-group > .Dropdown-title {
+  padding: 8px 10px;
+  color: #333333;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.Dropdown-option {
+  box-sizing: border-box;
+  color: rgba(51, 51, 51, 0.8);
+  cursor: pointer;
+  display: block;
+  padding: 8px 10px;
+}
+.Dropdown-option:last-child {
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.Dropdown-option:hover {
+  background-color: #f2f9fc;
+  color: #333;
+}
+.Dropdown-option.is-selected {
+  background-color: #f2f9fc;
+  color: #333;
+}
+.Dropdown-noresults {
+  box-sizing: border-box;
+  color: #ccc;
+  cursor: default;
+  display: block;
+  padding: 8px 10px;
+}
